@@ -109,7 +109,7 @@ case "${1:-''}" in
         sleep 3
         echo -n "."
 
-        if netstat -l | grep ":$SELENIUM_PORT " | grep -q -i listen
+        if netstat -ln | grep ":$SELENIUM_PORT " | grep -q -i listen
         then
           num=1
         fi
